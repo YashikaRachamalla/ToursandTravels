@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project
+            </title>
+        </head>
+        <body>
+            <h1>
+                Checkout Form
+                </h1>
+                <form onsubmit="return validateForm()">
+                    First Name:
+                    <input type="text" id="fname" required>
+                    <br>
+                    <br>
+                    Last Name:
+                    <input type="text" id="lname" required>
+                    <br>
+                    <br>
+                    Email:
+                    <input type="email" id="email" required>
+                    <br>
+                    <br>
+                    User ID:
+                    <input type="text" id="user" required>
+                    <br>
+                    <br>
+                    Password:
+                    <input type="password" id="pass" required>
+                    <br>
+                    <br>
+                    Confirm Password:
+                    <input type="password" id="cpass" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                    </form>
+                    <script>
+                        function validateForm()
+                        {
+                            var firstname=document.getElementById("fname").value;
+                            var lastname=document.getElementById("lname").value;
+                            var email=document.getElementById("email").value;
+                            var userid=document.getElementById("user").value;
+                            var password=document.getElementById("pass").value;
+                            var confirmpassword=document.getElementById("cpass").value;
+                            if(firstname===''||lastname===''||email===''||userid===''||password===''||confirmpassword==='')
+                            {
+                                alert("Please fill in all the fields");
+                            }
+                            if(password!==confirmpassword)
+                            {
+                                alert("Password does not match");
+                            }
+                            else{
+                                alert("Form submitted Successfully");
+                            }
+                        }
+                        
+                        </script>
+            </body>
+    </html>
